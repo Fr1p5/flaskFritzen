@@ -1,0 +1,36 @@
+body {
+    background-color: lightgrey;
+}
+
+h1 {
+    color: rgb(0, 9, 39);
+    text-align: center;
+}
+
+h2 {
+    color: rgb(0, 9, 39);
+}
+
+h3 {
+    padding-left: 30px;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+    color: darkslategray;
+    padding-left: 30px;
+}
+
+form {
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+form-check-input {
+    padding-top: 20px;
+}
+
+checkbox {
+    padding-left: 30px;
+}
