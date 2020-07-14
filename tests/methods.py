@@ -9,3 +9,15 @@ class player:
 
     def score(self):
         self.points = int(self.points + self.raise_points)
+
+    print(raise_points)
+
+names = ['Dylan', 'Bas', 'Wieger']
+points = [420, 69, 120]
+
+scoreBoard = list(zip(names, points))
+
+print(scoreBoard)
+
+for x in scoreBoard:
+    print('{} has {} points'.format(x[0], x[1]))
