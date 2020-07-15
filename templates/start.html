@@ -1,6 +1,10 @@
 {% extends "base.html"%}
 {% block title %}home page{% endblock %}
 
+{% block include_css %}
+<link rel="stylesheel" href="{{url_for('static', filename='styles/start.css')}}">"
+{% endblock %}
+
 {% block content %}
 <h1>Start the game</h1>
 
@@ -25,11 +29,11 @@
         <label for="exampleFormControlInput2">Amount of points per shot</label>
         <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="Enter number here">
     </div>
-    <div>
+    <div class="checkbox1">
         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-input" for="defaultCheck1">I have physical dices</label>
+        <label class="form-check-input" for="defaultCheck1">We use have physical dices</label>
     </div>
-    <div>
+    <div class="btn-primary">
         <button type="submit" class="btn btn-primary">Start</button>
     </div>
 </form>
