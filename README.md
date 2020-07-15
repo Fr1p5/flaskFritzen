@@ -10,10 +10,7 @@ $ venv/Scripts/activate <br>
 $ pip install flask <br>
 $ python app.py <br>
 
-{% extends "base.html"%}
-{% block title %}about page{% endblock %}
 
-{% block content %}
 <h1>Who is Fritzen?</h1>
 <p>
     Fritzen is a revolutionary game about throwing dices and drinking what you throw! It is a tactical dice game where there is a lot to drink! 
@@ -21,12 +18,12 @@ $ python app.py <br>
 </p>
 
 <p>
-    Category:       &emsp;&emsp;&emsp;&emsp;&emsp;Dice game<br>
-    Min. players:   &emsp;2<br>
-    Max. players:   &emsp;None<br>
-    Difficulty:     &emsp;&emsp;&emsp;Easy<br>
-    Level:          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Expert drinkers<br>
-    Time span:      &emsp;&emsp;&emsp;&emsp;15 minutes<br>
+    Category:&emsp;&emsp;&emsp;&emsp;&emsp;Dice game<br>
+    Min. players:&emsp;&emsp;&emsp;2<br>
+    Max. players:&emsp;&emsp;&emsp;None<br>
+    Difficulty:&emsp;&emsp;&emsp;&emsp;&emsp;Easy<br>
+    Level:&emsp;&emsp;&emsp;&emsp;&emsp;Expert drinkers<br>
+    Time span:&emsp;&emsp;&emsp;&emsp;15 minutes<br>
 </p>
 
 <h1>Instructions</h1>
@@ -56,4 +53,3 @@ $ python app.py <br>
     If you roll below 10, you may let one of the players to whom you have given shots drink again. This by throwing all six dices again five times. You can leave 
     any 1 that falls and that means an extra shot for the victim. Makes the total of the eyes 20, after the fifth roll, everyone drinks except the one who throws.
 </p>
-{% endblock %}
