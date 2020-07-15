@@ -19,10 +19,10 @@ $ python app.py <br>
 
 <p>
     Category:&emsp;&emsp;&emsp;&emsp;&emsp;Dice game<br>
-    Min. players:&emsp;&emsp;&emsp;2<br>
+    Min. players:&emsp;&emsp;&emsp;&emsp;2<br>
     Max. players:&emsp;&emsp;&emsp;None<br>
     Difficulty:&emsp;&emsp;&emsp;&emsp;&emsp;Easy<br>
-    Level:&emsp;&emsp;&emsp;&emsp;&emsp;Expert drinkers<br>
+    Level:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Expert drinkers<br>
     Time span:&emsp;&emsp;&emsp;&emsp;15 minutes<br>
 </p>
 
