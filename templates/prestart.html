@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Amount of players{% endblock %}
+
+{% block content %}
+<h1>This is where you input the amount of players</h1>
+
+<form action="/start" method="post">
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Amount of players</label>
+        <select type="submit" value="submit" name="amount_players" class="form-control" id="exampleFormControlSelect1">
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+        </select>
+    </div>
+
+    <div class="btn-light">
+        <button type="submit" class="btn btn-light">NEXT</button>
+    </div>
+</form>
+
+{% endblock %}
