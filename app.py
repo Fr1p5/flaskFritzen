@@ -8,20 +8,23 @@ def login():
     return render_template("login.html")
     if request.method == 'POST':
         return render_template("home.html")
-    
 
 @app.route('/')
 def welcome():
     return render_template("welcome.html")
 
-@app.route('/start')
+@app.route('/start', methods=['GET', 'POST'])
 def start():
-    return render_template("start.html")
+    if request.method == 'POST':
+        return render_template("start.html")
 
-@app.route('/start', methods=['POST'])
-def start_post():
-    amount_players = request.form['int']
-    return amount_players
+    if request.form["submit"] == "submit":
+        amount_players = request.form["amount_players"]
+        succes = process(amount_players)
+        return render_template("start.html", nameLoop="succesful" if succes else "Failed")
+
+    else:
+        return render_template(404)
 
 @app.route('/about')
 def about():
