@@ -8,10 +8,10 @@
 {% block content %}
 <h1>Start the game</h1>
 
-<form>
+<form method="POST">
     <div class="form-group">
         <label for="exampleFormControlSelect1">Amount of players</label>
-        <select class="form-control" id="exampleFormControlSelect1">
+        <select name="amount_players" class="form-control" id="exampleFormControlSelect1">
             <option>2</option>
             <option>3</option>
             <option>4</option>
@@ -21,20 +21,30 @@
             <option>8</option>
         </select>
     </div>
+
+{% for i in range(4) %}
     <div class="form-group">
-        <label for="exampleFormControlInput1">Names</label>
+        <label for="exampleFormControlInput1">Name</label>
         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter name here">
     </div>
+{% endfor %}
     <div class="form-group">
         <label for="exampleFormControlInput2">Amount of points per shot</label>
         <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="Enter number here">
     </div>
-    <div class="checkbox1">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-input" for="defaultCheck1">We use have physical dices</label>
+
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Physical dices</label>
     </div>
-    <div class="btn-primary">
-        <button type="submit" class="btn btn-primary">Start</button>
+
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Virtual dices</label>
+    </div>
+
+    <div class="btn-light">
+        <button type="submit" class="btn btn-light">START</button>
     </div>
 </form>
 

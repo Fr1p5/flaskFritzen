@@ -15,8 +15,13 @@ def welcome():
     return render_template("welcome.html")
 
 @app.route('/start')
-def home():
+def start():
     return render_template("start.html")
+
+@app.route('/start', methods=['POST'])
+def start_post():
+    amount_players = request.form['int']
+    return amount_players
 
 @app.route('/about')
 def about():
