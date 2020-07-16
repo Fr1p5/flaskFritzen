@@ -16,7 +16,7 @@ def welcome():
 @app.route('/prestart', methods=["POST", "GET"])
 def prestart():
     if request.method == "POST":
-        user = request.form["amount_players"]
+        amount_players = request.form["amount_players"]
         return redirect(url_for("user", usr=user))
     else:
         return render_template("prestart.html")
