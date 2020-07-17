@@ -23,7 +23,6 @@ def prestart():
     if request.method == "POST":
         amount_players = request.form["amount_players"]
         amount_players = int(amount_players)
-        print(amount_players)
 
         return render_template("prestart.html", amount_players=amount_players)
 
