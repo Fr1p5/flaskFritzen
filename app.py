@@ -10,10 +10,12 @@ def login():
     if request.method == 'POST':
         return render_template("home.html")
 
+
 @app.route('/')
 def welcome():
 
     return render_template("welcome.html")
+
 
 @app.route('/prestart', methods=["POST", "GET"])
 def prestart():
@@ -22,26 +24,17 @@ def prestart():
         amount_players = request.form["amount_players"]
         amount_players = int(amount_players)
         print(amount_players)
-        return amount_players
 
-    else:
-        return render_template("prestart.html")
+        return render_template("prestart.html", amount_players=amount_players)
 
-    return redirect(request.url)
+    return render_template("prestart.html")
 
 
 @app.route('/start', methods=["POST", "GET"])
 def start():
+    amount_players = request.form["amount_players"]
+    return render_template("start.html", amount_players=amount_players)
 
-    if request.method == "POST":
-        amount_players = prestart()
-        for i in range(amount_players):
-            print("name number: {}".format(i))
-            print(type(amount_players))
-        else:
-            print("Done here")
-            return redirect(request.url)
-    return render_template("start.html")
         
 @app.route("/<usr>")
 def user(usr):
