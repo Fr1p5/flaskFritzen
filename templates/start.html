@@ -1,4 +1,4 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 {% block title %}home page{% endblock %}
 
 {% block include_css %}
@@ -7,27 +7,20 @@
 
 {% block content %}
 <h1>Start the game</h1>
+<h1>{{ amount_players }}</h1>
 
-<form method="POST">
-    <div class="form-group">
-        <label for="exampleFormControlSelect1">Amount of players</label>
-        <select type="submit" name="amount_players" class="form-control" id="exampleFormControlSelect1">
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-        </select>
-    </div>
+global var x = {{ amount_players }};
 
-{% for nameLoop in range(2) %}
+<form action="/start" method="post">
+
+    var x = {{ amount_players }};
+    {% for names in x %}
     <div class="form-group">
-        <label for="exampleFormControlInput1">Name</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter name here">
+        <label for="exampleFormControlInput1">Name {{ names + 1 }}</label>
+        <input type="text" name="names" class="form-control" id="exampleFormControlInput1" placeholder="Enter name here">
     </div>
-{% endfor %}
+    {% endfor %}
+
 
     <div class="form-group">
         <label for="exampleFormControlInput2">Amount of points per shot</label>
