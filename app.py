@@ -27,15 +27,17 @@ def welcome():
 def add_players():
 
     print("this is the add players page")
+    names = []
 
     if request.method == "POST":
 
         name = request.form['name']
         print(name)
-        names = []
-        names.append(name)
-        print(names)
-        return render_template("add_players.html")
+
+        for i in range(3):
+            names.append(name)
+            print(names)
+            return render_template("add_players.html")
 
     else:
         return render_template("add_players.html")

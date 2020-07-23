@@ -4,6 +4,7 @@
 
 {% block content %}
 <h1>Enter the names of the players</h1>
+<h2>{{ names }}</h2>
 
 <form action="/add_players" method="POST">
 
@@ -13,7 +14,14 @@
     </div>
 
     <div>
-        <button type="submit" name="add" value="add" class="btn btn-primary">ADD</button>
+        <button type="submit" name="add" value="add" class="btn btn-primary">ADD </button>
+    </div>
+
+</form>
+
+<form action="/start" method="POST">
+
+    <div class="next">
         <button type="submit" name="next" value="next"  class="btn btn-success">NEXT</button>
     </div>
 
