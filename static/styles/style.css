@@ -40,9 +40,12 @@ form {
 }
 
 .btn-light {
-    background-color: green;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+}
+
+.btn-next {
+    margin-left: 20px;
 }
 
 .center {

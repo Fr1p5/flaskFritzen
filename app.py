@@ -3,6 +3,12 @@ from flask import render_template, redirect, url_for, request, session
 
 app = Flask(__name__)
 
+class players:
+    def __init__(self, name, points):
+        self.name = name
+        self.points = points
+
+
 @app.route('/login')
 def login():
 
@@ -17,22 +23,29 @@ def welcome():
     return render_template("welcome.html")
 
 
-@app.route('/prestart', methods=["POST", "GET"])
-def prestart():
+@app.route('/add_players', methods=["POST", "GET"])
+def add_players():
+
+    print("this is the add players page")
 
     if request.method == "POST":
-        amount_players = request.form["amount_players"]
-        amount_players = int(amount_players)
 
-        return render_template("prestart.html", amount_players=amount_players)
+        name = request.form['name']
+        print(name)
+        names = []
+        names.append(name)
+        print(names)
+        return render_template("add_players.html")
 
-    return render_template("prestart.html")
+    else:
+        return render_template("add_players.html")
+
+    return render_template("add_players.html")
 
 
 @app.route('/start', methods=["POST", "GET"])
 def start():
-    amount_players = request.form["amount_players"]
-    return render_template("start.html", amount_players=amount_players)
+    return render_template("start.html")
 
         
 @app.route("/<usr>")

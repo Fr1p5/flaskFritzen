@@ -7,20 +7,9 @@
 
 {% block content %}
 <h1>Start the game</h1>
-<h1>{{ amount_players }}</h1>
-
-global var x = {{ amount_players }};
+<h1>{{ name }}</h1>
 
 <form action="/start" method="post">
-
-    var x = {{ amount_players }};
-    {% for names in x %}
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Name {{ names + 1 }}</label>
-        <input type="text" name="names" class="form-control" id="exampleFormControlInput1" placeholder="Enter name here">
-    </div>
-    {% endfor %}
-
 
     <div class="form-group">
         <label for="exampleFormControlInput2">Amount of points per shot</label>
@@ -37,8 +26,8 @@ global var x = {{ amount_players }};
         <label class="form-check-label" for="inlineRadio2">Virtual dices</label>
     </div>
 
-    <div class="btn-light">
-        <button type="submit" class="btn btn-light">START</button>
+    <div class="btn-success">
+        <button type="submit" class="btn btn-success">START</button>
     </div>
 </form>
 
