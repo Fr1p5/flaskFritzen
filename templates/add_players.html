@@ -3,15 +3,16 @@
 {% block title %}add_players{% endblock %}
 
 {% block content %}
-<h1>Enter the names of the players</h1>
-<h2>{{ names }}</h2>
+<h1>Enter the {{ amount_players }} names of the players</h1>
 
 <form action="/add_players" method="POST">
 
+    {% for name in range(amount_players) %}
     <div class="form-group">
         <label for="exampleFormControlInput">Name</label>
         <input type="text" name="name" class="form-control" id="exampleFormControlInput" placeholder="Enter name here">
     </div>
+    {% endfor %}
 
     <div>
         <button type="submit" name="add" value="add" class="btn btn-primary">ADD </button>

@@ -4,7 +4,7 @@
 {% block content %}
 <h1>Enter the amount of players</h1>
 
-<form action="/start" method="POST">
+<form action="/add_players" method="POST">
     <div class="form-group">
         <label for="exampleFormControlSelect1">Amount of players</label>
         <select type="submit" value="submit" name="amount_players" class="form-control" id="exampleFormControlSelect1">
@@ -16,10 +16,6 @@
             <option>7</option>
             <option>8</option>
         </select>
-    </div>
-
-    <div class="btn-light">
-        <button type="button" class="btn btn-light">ADD</button>
     </div>
 
     <div class="btn-next">

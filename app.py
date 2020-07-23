@@ -22,27 +22,30 @@ def welcome():
 
     return render_template("welcome.html")
 
+@app.route('/prestart', methods=["POST", "GET"])
+def prestart():
+    if request.method == "POST":
+        amount_players = request.form["amount_players"]
+        amount_players = int(amount_players)
+        print(amount_players)
+        return render_template("prestart.html", amount_players=amount_players)
+
+    print("this is the prestart page ")
+
+    return render_template("prestart.html")
+
 
 @app.route('/add_players', methods=["POST", "GET"])
 def add_players():
 
     print("this is the add players page")
-    names = []
+    amount_players = int(request.form["amount_players"])
+    print(amount_players)
+    print(type(amount_players))
 
-    if request.method == "POST":
 
-        name = request.form['name']
-        print(name)
 
-        for i in range(3):
-            names.append(name)
-            print(names)
-            return render_template("add_players.html")
-
-    else:
-        return render_template("add_players.html")
-
-    return render_template("add_players.html")
+    return render_template("add_players.html", amount_players=int(amount_players))
 
 
 @app.route('/start', methods=["POST", "GET"])
