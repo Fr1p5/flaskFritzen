@@ -46,8 +46,7 @@ def add_players():
     names = []
 
     if request.method == "POST":
-        for i in range(amount_players):
-            names[i] = request.form['name']
+        for name in range(amount_players):
             print(names)
 
     return render_template("add_players.html", amount_players=int(amount_players))
@@ -55,6 +54,18 @@ def add_players():
 
 @app.route('/start', methods=["POST", "GET"])
 def start():
+
+    if request.method == "POST":
+        names = []
+        name = request.form['name']
+        amount_players = request.form['amount_players']
+
+        for i in range(amount_players):
+            name[i] = request.form['name']
+
+    print(type(names))
+    print(names)
+
     return render_template("start.html")
 
         
