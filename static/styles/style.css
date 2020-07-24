@@ -39,9 +39,8 @@ form {
     padding: 20px;
 }
 
-.btn-light {
+.btn-success {
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
 }
 
 .next {

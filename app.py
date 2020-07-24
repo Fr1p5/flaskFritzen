@@ -43,7 +43,12 @@ def add_players():
     print(amount_players)
     print(type(amount_players))
 
+    names = []
 
+    if request.method == "POST":
+        for i in range(amount_players):
+            names[i] = request.form['name']
+            print(names)
 
     return render_template("add_players.html", amount_players=int(amount_players))
 

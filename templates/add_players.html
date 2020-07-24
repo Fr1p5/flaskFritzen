@@ -9,8 +9,8 @@
 
     {% for name in range(amount_players) %}
     <div class="form-group">
-        <label for="exampleFormControlInput">Name</label>
-        <input type="text" name="name" class="form-control" id="exampleFormControlInput" placeholder="Enter name here">
+        <label for="exampleFormControlInput">name {{ name }}</label>
+        <input type="text" name="name{{name}}" class="form-control" id="exampleFormControlInput" placeholder="Enter name here">
     </div>
     {% endfor %}
 
