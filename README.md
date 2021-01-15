@@ -53,3 +53,5 @@ $ python app.py <br>
     If you roll below 10, you may let one of the players to whom you have given shots drink again. This by throwing all six dices again five times. You can leave 
     any 1 that falls and that means an extra shot for the victim. Makes the total of the eyes 20, after the fifth roll, everyone drinks except the one who throws.
 </p>
+
+This is by far not done, most recent branch is add_names. 
