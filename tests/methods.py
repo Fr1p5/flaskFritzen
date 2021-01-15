@@ -12,7 +12,7 @@ class player:
 
     print(raise_points)
 
-names = ['Dylan', 'Bas', 'Wieger']
+names = ['user1', 'user2', 'user3']
 points = [420, 69, 120]
 
 scoreBoard = list(zip(names, points))
