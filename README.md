@@ -21,19 +21,12 @@ $ python app.py
 </p>
 
 | Category | Dice Game |
+|---|---|
 | Min. players | 2 |
 | Max. players | None |
 | Difficulty | Easy |
 | Level | Expert drinkers |
 | Time span | 15 Minutes |
-
-    Category:&emsp;&emsp;&emsp;&emsp;&emsp;Dice game<br>
-    Min. players:&emsp;&emsp;&emsp;&emsp;2<br>
-    Max. players:&emsp;&emsp;&emsp;None<br>
-    Difficulty:&emsp;&emsp;&emsp;&emsp;&emsp;Easy<br>
-    Level:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Expert drinkers<br>
-    Time span:&emsp;&emsp;&emsp;&emsp;15 minutes<br>
-
 
 # Instructions
 <p>
