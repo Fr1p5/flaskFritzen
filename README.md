@@ -1,17 +1,20 @@
 # How to run Linux / MacOs
+```bash
 $ git clone https://github.com/73556O8/Fritzen-flask.git <br>
 $ source venv/bin/activate <br>
 $ pip3 install flask <br>
 $ python3 app.py <br>
+```
 
 # How to run Windows
+```cmd
 $ git clone https://github.com/73556O8/Fritzen-flask.git <br>
 $ venv/Scripts/activate <br>
 $ pip install flask <br>
 $ python app.py <br>
+```
 
-
-<h1>Who is Fritzen?</h1>
+# Who is Fritzen?
 <p>
     Fritzen is a revolutionary game about throwing dices and drinking what you throw! It is a tactical dice game where there is a lot to drink! 
     You can save yourself by playing smart and following the right tactics...
